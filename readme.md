@@ -1,16 +1,11 @@
-# [grunt-image](https://npmjs.org/package/grunt-image)
+# [grunt-image](https://npmjs.org/package/grunt-mega-image)
 
 Optimize PNG, JPEG, GIF, SVG images with grunt task.
-
-[![Build Status](https://travis-ci.org/1000ch/grunt-image.svg?branch=master)](https://travis-ci.org/1000ch/grunt-image)
-[![NPM version](https://badge.fury.io/js/grunt-image.svg)](http://badge.fury.io/js/grunt-image)
-[![Dependency Status](https://david-dm.org/1000ch/grunt-image.svg)](https://david-dm.org/1000ch/grunt-image)
-[![devDependency Status](https://david-dm.org/1000ch/grunt-image/dev-status.svg)](https://david-dm.org/1000ch/grunt-image#info=dev)
 
 ## Install
 
 ```sh
-$ npm install --save-dev grunt-image
+$ npm install --save-dev grunt-mega-image
 ```
 
 ## Usage
@@ -59,7 +54,3 @@ module.exports = function (grunt) {
 ## Result
 
 ![](https://raw.github.com/1000ch/grunt-image/master/screenshot/terminal.png)
-
-## License
-
-MIT: http://1000ch.mit-license.org/

@@ -5,11 +5,12 @@ const path = require('path');
 const pify = require('pify');
 const fsP = pify(fs);
 const mkdirp = require('mkdirp');
-const eachAsync = require('each-async');
 const chalk = require('chalk');
 const filesize = require('filesize');
 const optimize = require('../lib/optimize');
 const round10 = require('../lib/round10');
+const Promise = require('bluebird');
+const os = require('os');
 
 module.exports = function (grunt) {
   grunt.registerMultiTask('image', 'Optimize PNG, JPEG, GIF, SVG images.', function () {
@@ -25,14 +26,14 @@ module.exports = function (grunt) {
       svgo: true
     });
 
-    eachAsync(this.files, (file, index, next) => {
+    Promise.map(this.files, (file) => {
       const src = file.src[0];
       const dest = file.dest;
 
       // make directory if does not exist
-      mkdirp.sync(path.dirname(dest));
+      mkdirp.sync(path.dirname(dest))
 
-      fsP.readFile(src)
+      return fsP.readFile(src)
         .then(buffer => optimize(buffer, options))
         .then(buffer => {
           let original = fs.statSync(src).size;
@@ -60,18 +61,16 @@ module.exports = function (grunt) {
               });
           }
         })
-        .then(() => next())
-        .catch(error => {
+        .catch((error) => {
           grunt.warn(error);
-          next(error);
         });
-    }, error => {
-      if (error) {
-        grunt.warn(error);
-        done(error);
-      } else {
-        done();
-      }
+    }, {
+      concurrency: os.cpus().length
+    }).then(() => {
+      done();
+    }).catch((error) => {
+      grunt.warn(error);
+      done(error);
     });
   });
 };
