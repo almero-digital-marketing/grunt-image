@@ -1,34 +1,41 @@
 {
-  "name": "grunt-mega-image",
-  "version": "2.3.0",
-  "description": "Optimize PNG, JPEG, GIF, SVG images.",
-  "repository": "almero-digital-marketing/grunt-image",
+  "_from": "grunt-mega-image@^2.3.0",
+  "_id": "grunt-mega-image@2.3.0",
+  "_inBundle": false,
+  "_integrity": "sha1-cY6WDqab40174OscKszsvhuVco4=",
+  "_location": "/grunt-mega-image",
+  "_phantomChildren": {
+    "bin-build": "2.2.0",
+    "bin-wrapper": "3.0.2",
+    "logalot": "2.1.0"
+  },
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "grunt-mega-image@^2.3.0",
+    "name": "grunt-mega-image",
+    "escapedName": "grunt-mega-image",
+    "rawSpec": "^2.3.0",
+    "saveSpec": null,
+    "fetchSpec": "^2.3.0"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/grunt-mega-image/-/grunt-mega-image-2.3.0.tgz",
+  "_shasum": "718e960ea69be34d7be0eb1c2accecbe1b95728e",
+  "_spec": "grunt-mega-image@^2.3.0",
+  "_where": "/home/kamen/Projects/dentalcomfort-mikser",
   "author": {
     "name": "Almero",
     "email": "info@almero.bg",
-    "web": "https://github.com/almero-digital-marketing"
+    "url": "https://github.com/almero-digital-marketing"
   },
-  "license": "MIT",
-  "engines": {
-    "node": ">=4.0.0"
+  "bugs": {
+    "url": "https://github.com/almero-digital-marketing/grunt-image/issues"
   },
-  "scripts": {
-    "test": "grunt test"
-  },
-  "homepage": "https://github.com/almero-digital-marketing/grunt-image",
-  "keywords": [
-    "compress",
-    "minify",
-    "optimize",
-    "image",
-    "img",
-    "jpg",
-    "jpeg",
-    "png",
-    "gif",
-    "svg",
-    "gruntplugin"
-  ],
+  "bundleDependencies": false,
   "dependencies": {
     "bluebird": "^3.4.6",
     "chalk": "^1.1.3",
@@ -49,12 +56,42 @@
     "pify": "^2.3.0",
     "pngquant-bin": "^3.1.0",
     "svgo": "^0.7.0",
+    "tempfile": "^2.0.0",
     "zopflipng-bin": "^3.0.1"
   },
+  "deprecated": false,
+  "description": "Optimize PNG, JPEG, GIF, SVG images.",
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-nodeunit": "^1.0.0"
-  }
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "homepage": "https://github.com/almero-digital-marketing/grunt-image",
+  "keywords": [
+    "compress",
+    "minify",
+    "optimize",
+    "image",
+    "img",
+    "jpg",
+    "jpeg",
+    "png",
+    "gif",
+    "svg",
+    "gruntplugin"
+  ],
+  "license": "MIT",
+  "name": "grunt-mega-image",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almero-digital-marketing/grunt-image.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "version": "2.4.0"
 }
